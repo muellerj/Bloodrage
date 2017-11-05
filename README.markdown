@@ -26,9 +26,10 @@ Create a macro to call `Bloodrage()` or `/bloodrage`:
 
 ## Commands
 
-`Threat` can be enabled or disabled and its operation inspected:
+`Bloodrage` can be enabled or disabled and its operation inspected:
 
-    /bloodrage             Cast "best" threat ability
+    /bloodrage             Switch to default stance, on 2nd press activate
+                           Bloodrage
     /bloodrage debug       Toggle debug messages on/off
 
 ## Bugtracker

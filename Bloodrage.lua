@@ -17,14 +17,15 @@ end
 -- Normal Functions
 
 local function Print(msg)
-  if (not DEFAULT_CHAT_FRAME) then return; end
+  if (not DEFAULT_CHAT_FRAME) then
+    return;
+  end
   DEFAULT_CHAT_FRAME:AddMessage(msg);
 end
 
 local function Debug(msg)
   if (Bloodrage_Configuration["Debug"]) then
-    if (not DEFAULT_CHAT_FRAME) then return; end
-    DEFAULT_CHAT_FRAME:AddMessage(msg);
+    Print(msg);
   end
 end
 
@@ -85,13 +86,13 @@ function Bloodrage_SlashCommand(msg)
   elseif (command == "debug") then
     if (Bloodrage_Configuration["Debug"]) then
       Bloodrage_Configuration["Debug"] = false;
-      Print(BINDING_HEADER_BLOODRAGE .. ": " .. SLASH_BLOODRAGE_DEBUG .. " " .. SLASH_BLOODRAGE_DISABLED .. ".")
+      Print(BINDING_HEADER_BLOODRAGE .. ": " .. SLASH_BLOODRAGE_DEBUG .. " " .. SLASH_BLOODRAGE_DISABLED .. ".");
     else
       Bloodrage_Configuration["Debug"] = true;
-      Print(BINDING_HEADER_BLOODRAGE .. ": " .. SLASH_BLOODRAGE_DEBUG .. " " .. SLASH_BLOODRAGE_ENABLED .. ".")
+      Print(BINDING_HEADER_BLOODRAGE .. ": " .. SLASH_BLOODRAGE_DEBUG .. " " .. SLASH_BLOODRAGE_ENABLED .. ".");
     end
   else
-    Print(SLASH_BLOODRAGE_HELP)
+    Print(SLASH_BLOODRAGE_HELP);
   end
 end
 
@@ -105,6 +106,6 @@ end
 
 function Bloodrage_OnEvent(event)
   if (event == "VARIABLES_LOADED") then
-    Bloodrage_Configuration_Init()
+    Bloodrage_Configuration_Init();
   end
 end
