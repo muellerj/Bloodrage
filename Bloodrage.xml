@@ -1,0 +1,23 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/"  
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.blizzard.com/wow/ui/ C:\Projects\WoW\Bin\Interface\FrameXML\UI.xsd">
+  <!-- $Id$ -->
+  
+  <!-- Localization -->
+  <Script file="Localization.lua"/>
+  
+  <!-- My Script -->
+  <Script file="Threat.lua"/>
+
+  <!-- My AddOn Frames -->
+  <Frame name="ThreatFrame" parent="UIParent">
+    <Scripts>
+      <OnLoad>
+        Threat_OnLoad();
+      </OnLoad>
+      <OnEvent>
+        Threat_OnEvent(event);
+      </OnEvent>
+    </Scripts>
+  </Frame>
+</Ui>

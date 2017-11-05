@@ -1,0 +1,5 @@
+<Bindings>
+  <Binding name="BLOODRAGE" header="BLOODRAGE">
+    Bloodrage();
+  </Binding>
+</Bindings>
